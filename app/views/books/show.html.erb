@@ -1,0 +1,13 @@
+<h2>Book detail</h2>
+
+<div>
+<p><%= @book.title %></p>
+
+<p><%= @book.body %></p>
+</div>
+
+<%= link_to "Edit", edit_book_path(@book) %>
+<%= link_to "Destroy", book_path(@book), method: :delete, "data-confirm" => "本当に削除しますか？"  %>
+
+#ユーザーアイコン
+#ユーザーネーム（リンク）
