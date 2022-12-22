@@ -1,0 +1,9 @@
+<h2>Books</h2>
+<% @book.each do |book| %>
+<div>
+  <p>Title：<%= link_to book.title, book_path(book.id) %></p>
+  <p>Opinion：<%= book.body %></p>
+</div>
+<% end %>
+
+#ユーザー画像
