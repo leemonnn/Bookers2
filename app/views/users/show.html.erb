@@ -6,6 +6,14 @@
   <h4>introduction</h4>
   <p><%= @user.introduction %></p>
 </div>
-
-
 <%= link_to "Edit", edit_user_path(@user) %>
+
+<h1>New Book</h1>
+
+<%= form_with model: @book do |f| %>
+  <h4>Title</h4>
+   <%= f.text_field :title %>
+  <h4>Opinion</h4>
+   <%= f.text_area :body %>
+  <%= f.submit 'Create Book' %>
+<% end %>
