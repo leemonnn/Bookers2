@@ -1,5 +1,6 @@
 <div class="col-md-3">
-<h2>User info</h2>
+   
+　<h2>User info</h2>
     <%= form_with model: user do |f| %>
     <%= image_tag user.get_profile_image(100,100) %>
      <table class="table">
@@ -20,7 +21,8 @@
       <% end %>
      <% end %>
      </div>
-
+      
+      
       <h2>New book</h2>
       <%= form_with model: book do |f| %>
        <label>Title</label>
