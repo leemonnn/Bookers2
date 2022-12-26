@@ -30,7 +30,7 @@
               <% end %>
              </li>
              <li class= "nav-item">
-              <%= link_to users_path(current_user.id),class:"nav-link text-light" do %>
+              <%= link_to users_path,class:"nav-link text-light" do %>
                <i class="fas fa-users"></i>Users
               <% end %>
              </li>
@@ -56,12 +56,12 @@
               <% end %>
              </li>
              <li class= "nav-item">
-              <%= link_to new_user_session_path,class:"nav-link text-light" do %>
+              <%= link_to new_user_registration_path,class:"nav-link text-light" do %>
                <i class="fas fa-user-plus"></i>Sign Up
               <% end %>
              </li>
              <li class= "nav-item">
-              <%= link_to new_user_registration_path,class:"nav-link text-light" do %>
+              <%= link_to user_session_path,class:"nav-link text-light" do %>
                <i class="fas fa-sign-out-alt"></i>Log in
               <% end %>
              </li>
@@ -72,14 +72,19 @@
     </nav> 
    </header>
    <main class="mb-auto">
-    
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    
     <%= yield %>
    </main>
-   <footer class="bg-dark text-white pt-5 pb-4">
-    <p>CopyRight Infratop.inc</p>
+   
+   <footer>
+    <div class="container mr-5">
+     <div class="row">
+      <div class="mx-auto">
+       <p>CopyRight Infratop.inc</p>
+      </div>
+     </div>
+    </div>
    </footer>
   </body>
 </html>

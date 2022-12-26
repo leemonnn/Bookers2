@@ -15,19 +15,14 @@
      and emotions</br>
      about various books!</p>
 
-
+   <div class="btn-wrapper col-10 mx-auto"></div>
     <div class="row"> 
-    <%= link_to "Log_in", new_user_session_path, class:'btn btn-sm btn-info btn-block' %>
+     <%= link_to "Log_in", new_user_session_path, class:'btn btn-sm btn-info btn-block mb-3' %>
+    </div>
+    <div class="row"> 
+     <%= link_to "Sing_up", new_user_registration_path, class:'btn btn-sm btn-success btn-block' %>
+    </div>
    </div>
-   <div class="row"> 
-    <%= link_to "Sing_up", new_user_registration_path, class:'btn btn-sm btn-success btn-block' %>
-   </div>
-
   </div>
  </div>
 </div>
-<li class= "nav-item">
-              <%= link_to root_path,class:"nav-link text-light" do %>
-               <i class="fas fa-home"></i>Home
-              <% end %>
-             </li>
