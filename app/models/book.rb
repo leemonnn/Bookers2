@@ -4,6 +4,6 @@ class Book < ApplicationRecord
   validates :body, presence: true
   validates :body, length: { maximum: 200 }
   
-  book = belongs_to :user
+  belongs_to :user
   
 end

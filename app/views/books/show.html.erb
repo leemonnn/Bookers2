@@ -19,10 +19,14 @@
         <td><%= @book.body %></td>
         <% if @book.user == current_user %>
          <td>
-         <a class="btn btn-sm btn-success" href="edit">Edit</a>
+          <div class="row">
+           <%= link_to "Edit", edit_book_path, class:'btn btn-sm btn-success' %>
+          </div>
          </td>
          <td>
-         <a class="btn btn-sm btn-danger"  data-confirm= "本当に削除しますか？" href="book_path(@book), method: :delete">Destroy</a>
+          <div class="row">
+           <%= link_to "Delete", book_path(@book), class:"btn btn-sm btn-danger", method: :delete %>
+          </div>
          </td>
         <% end %>
        </tr>

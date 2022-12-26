@@ -1,11 +1,33 @@
-<h1>welcome to Bookers !!</h1>
+<p id="notice"></p>
+ <div class="container">
+  <div class="row">
+  <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
+   <div class="title">
+    <h1>welcome to 
+     <i class="fa-solid fa-book"></i>
+     <strong>Bookers</strong> !! 
+     </h1>
+     </div>
 
-<p>In Bookers,</p>
+  <p>In Bookers,</p>
 
-<p>you can share and exchange your opinions , inpressions ,</br>
-   and emotions</br>
-   
-   about various books!</p>
+  <p>you can share and exchange your opinions , inpressions ,</br>
+     and emotions</br>
+     about various books!</p>
 
-<a href= /users/sign_in>Log in</a>
-<a href= "users/sign_up">Sign up</a>
+
+    <div class="row"> 
+    <%= link_to "Log_in", new_user_session_path, class:'btn btn-sm btn-info btn-block' %>
+   </div>
+   <div class="row"> 
+    <%= link_to "Sing_up", new_user_registration_path, class:'btn btn-sm btn-success btn-block' %>
+   </div>
+
+  </div>
+ </div>
+</div>
+<li class= "nav-item">
+              <%= link_to root_path,class:"nav-link text-light" do %>
+               <i class="fas fa-home"></i>Home
+              <% end %>
+             </li>

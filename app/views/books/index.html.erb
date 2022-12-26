@@ -1,7 +1,6 @@
 <p id="notice"></p>
 <div class="container">
  <div class="row">
-  <div class="col-md-4">
    <% if @book.errors.any? %>
     <ul class="alert alert-danger" role="alert">
      <h6 class="alert-heading">
@@ -13,42 +12,8 @@
     </ul>
    <% end %>
    
-   <h2>User info</h2>
-    <%= image_tag @book.user.get_profile_image(100,100) %>
-     <table class="table">
-      <tbody>
-       <tr>
-        <th>name</th>
-        <th><%= @book.user.name %></th>
-       </tr>
-       <tr>
-        <th>introduction</th>
-        <th><%= @book.user.introduction %></th>
-       </tr>
-      </tbody>
-     </table>
-     <div class="row">
-      <a class="btn btn-outline-secondary btn-block" href="/users/:id/edit" role="fas fa-user-cog">"fas fa-user-cog"</a>
-     </div>
-     
-     <h2>New Book</h2>
-      <form action="/books" method="post" class="form-new">
-       <%= form_with model: @book do |f| %>
-        <div class="form-new">
-         <label for="book_title">Title</label>
-         <input type="text" class="form-control book_title" name="book-title" id="book_title">
-        </div>
-        <div class="form-new">
-         <label for="book_body">Opinion</label>
-         <input type="area"  class="form-control book_body" name="book-body" id="book_body">
-        </div>
-        <div class="form-new">
-         <button type="submit" class="btn btn-success">Create Book</button>
-        </div>
-       <% end %>
-      </form>
-  </div>
- 
+   <%= render 'list', book:@book,user: @user %>
+   
   <div class="col-md-8">
    <h2>Books</h2>
     <table class="table tabli-hover table-inverse">

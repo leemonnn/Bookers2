@@ -15,7 +15,9 @@
    <header class="shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
      <div class="container">
-      <h2>Bookers</h2>
+      <div class="row">
+       <%= link_to "Bookers",root_path,class:"text-light" %>
+      </div>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
          </button>
@@ -33,7 +35,7 @@
               <% end %>
              </li>
              <li class= "nav-item">
-              <%= link_to books_path(current_user.id),class:"nav-link text-light" do %>
+              <%= link_to books_path,class:"nav-link text-light" do %>
                <i class="fas fa-book-open"></i>Books
               <% end %>
              </li>
@@ -54,12 +56,12 @@
               <% end %>
              </li>
              <li class= "nav-item">
-              <%= link_to new_user_registration_path,class:"nav-link text-light" do %>
+              <%= link_to new_user_session_path,class:"nav-link text-light" do %>
                <i class="fas fa-user-plus"></i>Sign Up
               <% end %>
              </li>
              <li class= "nav-item">
-              <%= link_to new_user_session_path,class:"nav-link text-light" do %>
+              <%= link_to new_user_registration_path,class:"nav-link text-light" do %>
                <i class="fas fa-sign-out-alt"></i>Log in
               <% end %>
              </li>

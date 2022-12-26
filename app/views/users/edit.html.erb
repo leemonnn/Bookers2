@@ -14,24 +14,24 @@
 
   <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
    <h2>User info</h2>
-    <form action="/users" method="patch" class="form-up">
-     <%= form_with model: @user do |f| %>
-      <div class="form-up"> 
-       <label for="inputName">Name</label>
-       <input type="text" class="form-control user_name" name="user-name" id="inputName">
+     <%= form_with model: @users do |f| %>
+      <div class="form"> 
+       <label>Name</label>
+        <%= f.text_field :name %>
       </div>
-      <div class="form-up"> 
-       <label for="inputImage">Image</label>
-       <%= f.file_field :profile_image,  accept: "image/*" %>
+      <div class="form"> 
+       <label>Image</label>
+       <%= f.file_field :profile_image, accept: "image/*" %>
       </div>
-      <div class="form-up"> 
-       <label for="inputIntroduction">Introduction</label>
-       <input type="area" class="form-control user_introduction" name="user-introduction" id="inputIntroduction">
+      <div class="form"> 
+       <label>Introduction</label>
+        <%= f.text_area :introduction %>
       </div>
-      <div class="form-up"> 
-       <button type="submit" class="btn btn-secondary">Update Book</button>
+      <div class="form">
+       <%=f.submit 'Update User', class:"btn btn-success" %>
       </div>
      <% end %>
+     </form>
   </div>
  </div>
 </div>
