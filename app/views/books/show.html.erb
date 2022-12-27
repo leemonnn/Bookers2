@@ -14,14 +14,14 @@
        <tbody>
         <tr>
          <td>
-          <%= link_to user_path(@book.id) do %>
+          <%= link_to user_path(@user.id) do %>
           <%= image_tag @user.get_profile_image(100,100) %><br>
           <%= @book.user.name %>
           <% end %>
          </td>
-         <td><%= link_to @book.title, book_path(@book.id) %></td>
+         <td><%= link_to @book.title, book_path %></td>
          <td><%= @book.body %></td>
-         <% if @book.user == current_user %>
+         <% if @user == current_user %>
           <td>
            <div class="row">
             <%= link_to "Edit", edit_book_path, class:'btn btn-sm btn-success' %>

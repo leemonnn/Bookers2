@@ -1,8 +1,8 @@
 <p id="notice"></p>
 <div class="container px-5 px-sm-0">
  <div class="row">
-   <%= render 'books/list', user:@users,book:@book %>
-  </div>
+   <%= render 'books/list', user:@user,book:@book %>
+  
   <div class="col-md-8 offset-md-1">
     <h2>Books</h2>
      <table class="table">
@@ -15,15 +15,19 @@
       </thead>
       <tbody>
        <tr>
-        <td><%= image_tag @user.get_profile_image(100,100) %></td>
-        <td></td>
-        <td><%= @book.body %></td>
+        <div class="row">
+         <td>
+          <%= link_to user_path(@user.id) do %>
+        　<%= image_tag @user.get_profile_image(100,100) %>
+      　   <% end %>
+         </td>
+         <td></td>
+         <td><%= @book.body %></td>
+        </div>
        </tr>
       </tbody>
      </table>
   </div>
  </div>
 </div>
-
-
 
